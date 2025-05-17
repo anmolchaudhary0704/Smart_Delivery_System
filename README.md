@@ -1,75 +1,93 @@
-# Save the generated README content to a file
-readme_content = """
-# 📦 Smart Delivery System
+# SwiftPath: A Smart Delivery Optimization System
 
-An intelligent, drone-based delivery system built with **Flask**, simulating real-time package delivery across locations in **Dehradun**. The system selects the optimal drone, calculates flight height, estimates delivery time, and provides live progress tracking with role-based access.
-
----
+A simulation platform for autonomous drone-based delivery logistics over real Dehradun city data. Built using **Flask**, **JavaScript**, and **CSV-based location graphs**, it models smart delivery systems of the future.
 
 ## 🚀 Features
 
-- 📍 **Smart Location Graph**: Predefined location network in Dehradun with estimated delivery times.
-- 🚁 **Drone Allocation**: Drones are selected based on location proximity and availability.
-- 📦 **Real-Time Delivery Simulation**: Orders simulate live delivery with progress updates.
-- 🌐 **Live Tracking Interface**: See delivery progress in real-time with automatic updates.
-- 🔒 **Role-Based Access**:
-  - **Admin**: View all orders, manage system.
-  - **User**: Place and track orders.
-- 📊 **Flight Height Calculation**: Determines flight altitude using elevation data via sorting logic.
-- 🗃️ **Order History**: Persistent tracking of placed orders and their statuses.
+- 🛰️ Real-time drone delivery simulation
+- 📍 Shortest path calculation using **Dijkstra’s Algorithm**
+- 🤖 Smart drone selection using **greedy logic**
+- 🧠 Flight height determination with **sorting**
+- 🔐 Role-based login (Admin & User)
+- 📊 Admin dashboard (in-progress)
+- 🗺️ Real-world location dataset of Dehradun
 
----
+## 🛠️ Tech Stack
 
-## 🛠️ Technologies Used
+- Python + Flask (Backend)
+- HTML/CSS + JavaScript (Frontend)
+- SQLite (Database)
+- CSV files for graph modeling of the city
 
-- **Python + Flask** (Web backend)
-- **HTML, CSS, JavaScript** (Frontend + live UI updates)
-- **Threading** (for real-time delivery simulation)
-- **CSV** (for location data)
-- **SQLite** or simple in-memory data store (for prototype tracking)
+## 📁 Project Structure
 
----
+```
+SMART_DELIVERY_SYSTEM/
+├── app.py                    # Main Flask backend logic
+├── templates/index.html      # Frontend UI
+├── static/script.js          # Delivery simulation logic
+├── dehradun_locations.csv    # Graph of real city nodes
+├── static/                   # Static assets (JS/CSS)
+├── templates/                # HTML templates
+```
 
-## 🗂️ Project Structure
+## ⚙️ How to Run Locally
 
-smart-delivery-system/
-│
-├── app.py # Main Flask backend
-├── templates/ # HTML templates
-│ ├── login.html
-│ ├── register.html
-│ ├── index.html
-│ ├── dashboard.html
-│ └── track.html
--├── static/
-│├── style.css
-│ └── script.js
-├── dehradun_locations.csv # Predefined delivery points
-├── requirements.txt
-└── README.md
+### 📦 Step 1: Extract the ZIP
+Unzip the project folder if you downloaded a ZIP file.
 
+### 💻 Step 2: Open Terminal & Navigate
 
----
+```bash
+cd path/to/SMART_DELIVERY_SYSTEM-main
+```
 
-## 🔧 Setup Instructions
+### 🐍 Step 3: (Optional) Create Virtual Environment
 
-### 1. Clone the repository
+```bash
+python -m venv venv
+venv\Scripts\activate      # Windows
+# or
+source venv/bin/activate     # macOS/Linux
+```
 
-git clone https://github.com/yourusername/smart-delivery-system.git
-cd smart-delivery-system
+### 🔧 Step 4: Install Dependencies
 
-### 2. Install dependencies
+```bash
+pip install flask
+```
 
-pip install -r requirements.txt
+(Or use `pip install -r requirements.txt` if present)
 
-### 3.  Run the Flask app
+### 🚀 Step 5: Run the App
 
+```bash
 python app.py
+```
 
-## ⚙️ Configuration (Optional)
+Open your browser and visit: `http://127.0.0.1:5000`
 
-# In app.py
-time.sleep(2)  # For fast testing
-# OR
-time.sleep(interval * 60)  # For realistic timing
+## ☁️ Pushing to GitHub
 
+### 1. Initialize Git
+
+```bash
+git init
+git add .
+git commit -m "Initial commit - SwiftPath delivery system"
+```
+
+### 2. Create a Repo on GitHub (e.g. `smart_delivery_system`)
+Copy the HTTPS repo link.
+
+### 3. Push Your Project
+
+```bash
+git remote add origin https://github.com/anmolchaudhary0704/Smart_Delivery_System.git
+git branch -M main
+git push -u origin main
+```
+
+## 📚 License
+
+This project is open-source and free for educational use.
